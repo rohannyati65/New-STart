@@ -1,6 +1,6 @@
 # 26. Remove Duplicates from Sorted Array (leetcode)
 # 2 Methods (Both Accepted)
-
+#Here in the first methode we have a Time Complexity of O(n^2) while in 2nd case we have it as O(n).
 # 1st
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
