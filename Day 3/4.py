@@ -1,4 +1,6 @@
 # 118. Pascal's Triangle (leetcode)
+
+# 1st Method (Better/Easy)
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
         if numRows == 0:
@@ -22,3 +24,18 @@ class Solution:
 
             l.append(l1)
         return l
+
+
+# 2nd Method (Recursion used)
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        if numRows == 1:
+            return [[1]]
+        res = self.generate(numRows - 1)
+        prev = res[-1]
+        cur = [prev[0]]
+        for i in range(len(prev) - 1):
+            cur.append(prev[i] + prev[i + 1])
+        cur.append(prev[-1])
+        res.append(cur)
+        return res
