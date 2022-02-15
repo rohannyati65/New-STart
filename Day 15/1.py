@@ -6,4 +6,3 @@ class Solution:
             if(nums.count(i)==1):
                 return(i)
         
-        
